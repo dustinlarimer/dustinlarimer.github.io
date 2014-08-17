@@ -4,8 +4,13 @@
   <title>lar.im/</title>
 </head>
 <body>
-  hi.
+  hi. <a id="er" href="./er">./er</a>
   <script src="https://d26b395fwzu5fz.cloudfront.net/latest/keen-tracker.min.js"></script>
   <script src="js/tracking.js"></script>
+  <script>
+    document.getElementById("er").onclick = function(e){
+      return k.trackExternalLink(e, "click");
+    };
+  </script>
 </body>
 </html>
