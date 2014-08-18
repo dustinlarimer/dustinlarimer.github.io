@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="../../css/normalize.css" />
+
+  <link type="text/css" rel="stylesheet" href="videojs/video-js.css" />
+  <script src="videojs/video.js"></script>
+  <script src="videojs/vjs.youtube.js"></script>
+
+  <style>
+  .video-js {
+    position: absolute;
+    left: -50%;
+    top: -50%;
+  }
+  p {
+    color: #fff;
+    opacity: .2;
+    position: absolute;
+    z-index: 1;
+  }
+  </style>
+</head>
+<body>
+  <p id="text"></p>
+  <video id="vid1" src="" class="video-js" controls preload="auto" width="200%" height="200%" data-setup='{ "controls": false, "autoplay": true, "techOrder": ["youtube"], "src": "http://www.youtube.com/watch?v=Wz04IBZqfFE" }'></video>
+  <script>
+    !function(){
+      // thx Akkuma!
+      // http://stackoverflow.com/a/6962808/2511985
+      (function loop() {
+        var rando = Math.round(Math.random() * (3000 - 500)) + 500;
+        setTimeout(function() {
+          doSomething(rando);
+          loop();
+        }, rando);
+      }());
+      function doSomething(t){
+        var adjust = (5 * Math.round(Math.random()*10) + 1);
+
+        var vid = document.getElementById("vid1");
+        vid.style.left = vid.style.top = -adjust + "%";
+
+        var text = document.getElementById("text");
+        var line = document.createElement("code");
+        line.style.opacity = Math.random();
+        line.appendChild(document.createTextNode(t + " :: " + adjust));
+        text.appendChild(line);
+        text.appendChild(document.createElement("br"));
+      }
+    }();
+    /*****************************
+      A: this all means nothing!
+    ******************************/
+  </script>
+</body>
+</html>
