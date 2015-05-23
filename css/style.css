@@ -60,10 +60,11 @@ textarea {
 
 @media (max-width: 768px) {
   body {
+    font-size: 18px;
     margin: 20px auto 0;
   }
   h1 {
-    font-size: 44px;
+    font-size: 48px;
   }
   ::-webkit-input-placeholder { color: #ccc;}
   :-moz-placeholder { color: #ccc; }
