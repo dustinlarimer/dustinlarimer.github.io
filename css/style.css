@@ -52,7 +52,7 @@ textarea {
   width: 100%;
 }
 
-::-webkit-input-placeholder { color: #e6e6e6; padding-left: 10px;}
-:-moz-placeholder { color: #e6e6e6; padding-left: 10px; }
-::-moz-placeholder { color: #e6e6e6; padding-left: 10px; }
-:-ms-input-placeholder { color: #e6e6e6; padding-left: 10px; }
+::-webkit-input-placeholder { color: #ccc; padding-left: 10px;}
+:-moz-placeholder { color: #ccc; padding-left: 10px; }
+::-moz-placeholder { color: #ccc; padding-left: 10px; }
+:-ms-input-placeholder { color: #ccc; padding-left: 10px; }
