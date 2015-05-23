@@ -68,7 +68,7 @@
   }
 
   function handleCompletion(){
-    client.addEvent('contact-form-submitted', {
+    client.addEvent('message', {
       message: {
         name: convo['name'].reply,
         text: convo['message'].reply,
