@@ -52,7 +52,22 @@ textarea {
   width: 100%;
 }
 
-::-webkit-input-placeholder { color: #ccc; padding-left: 10px;}
-:-moz-placeholder { color: #ccc; padding-left: 10px; }
-::-moz-placeholder { color: #ccc; padding-left: 10px; }
-:-ms-input-placeholder { color: #ccc; padding-left: 10px; }
+::-webkit-input-placeholder { color: #e7e7e7; padding-left: 10px;}
+:-moz-placeholder { color: #e7e7e7; padding-left: 10px; }
+::-moz-placeholder { color: #e7e7e7; padding-left: 10px; }
+:-ms-input-placeholder { color: #e7e7e7; padding-left: 10px; }
+
+
+@media (max-width: 768px) {
+  body {
+    font-weight: 200;
+    margin: 20px auto 0;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  ::-webkit-input-placeholder { color: #ccc;}
+  :-moz-placeholder { color: #ccc; }
+  ::-moz-placeholder { color: #ccc; }
+  :-ms-input-placeholder { color: #ccc; }
+}
