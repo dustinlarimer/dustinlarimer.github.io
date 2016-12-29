@@ -1,0 +1,15 @@
+title: Kick-start "knowing" with what you don't
+link: http://dustinlarimer.com/kick-start-knowing-with-what-you-dont/
+author: dustinlarimer
+description: 
+post_id: 1273
+created: 2011/08/09 21:02:30
+created_gmt: 2011/08/10 01:02:30
+comment_status: open
+post_name: kick-start-knowing-with-what-you-dont
+status: publish
+post_type: post
+
+# Kick-start "knowing" with what you don't
+
+![](http://www.dustinlarimer.com/content/uploads/2011/08/DSC_0085-746x380.jpg) My MFA thesis sent me into a Design space that I can't imagine any of my friends or colleagues guessing I would have ever found myself in. Local food?! At twenty-seven years I could barely feed myself, let alone feed myself _well_. The topic was a total departure from my comfort zone, which had a lot to do with why I chose it in the first place. After spending a few weeks buried in USDA reports, activist blogs and market studies, I realized that I had more false assumptions and biases informing my research plan than true understanding. I decided to address my misinformation about independent food by brain-vomiting everything I "knew" – or otherwise _thought_ I knew – on the wall of my office. Then, as with any other empirical data set, I began sorting these notes into affinity clusters. ![](http://www.dustinlarimer.com/content/uploads/2011/08/DSC_0145-746x380.jpg) ![](http://www.dustinlarimer.com/content/uploads/2011/08/DSC_0086-746x380.jpg) Themes emerged, and soon I had a nice tidy outline of thoughts with absolutely no factual basis whatsoever. By confronting this mess outright I was able to establish a solid roadmap for secondary research. It would have been impossible to engage producers and their customers in meaningful conversation, or to analyze data from those encounters, without a basic fluency in the reality of the context — not only for objective clarity _but also to establish the level of trust required to really be invited in_. In hindsight it sounds painfully obvious, but how often do we really stop and consider the biases, assumptions, and foreign determinacy that stows away in the background of contextual research and analysis. ![](http://www.dustinlarimer.com/content/uploads/2011/08/DSC_0152-498x254-custom.jpg) This evolving list of uncertainties and "known unknowns" informed a more critical background analysis of the design space and, like a good set of questions should, led not only to exact answers but _better questions_, and a conversational interview protocol that unlocked hours of incredible data from every interview participant. This was by far the most comprehensive and effective research project I've ever conducted, but it wouldn't have been so without first challenging my own assumptions and biases. ![](http://www.dustinlarimer.com/content/uploads/2011/08/DSC_0158-746x380.jpg)
