@@ -1,9 +1,7 @@
 body {
   color: #333;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 21px;
   font-weight: 200;
-  letter-spacing: .5px;
   margin: 50px auto;
   width: 90%;
 }
@@ -52,10 +50,10 @@ textarea {
   width: 100%;
 }
 
-::-webkit-input-placeholder { color: #e7e7e7; padding-left: 10px;}
-:-moz-placeholder { color: #e7e7e7; padding-left: 10px; }
-::-moz-placeholder { color: #e7e7e7; padding-left: 10px; }
-:-ms-input-placeholder { color: #e7e7e7; padding-left: 10px; }
+::-webkit-input-placeholder { color: #d7d7d7; padding-left: 10px;}
+:-moz-placeholder { color: #d7d7d7; padding-left: 10px; }
+::-moz-placeholder { color: #d7d7d7; padding-left: 10px; }
+:-ms-input-placeholder { color: #d7d7d7; padding-left: 10px; }
 
 
 @media (max-width: 768px) {
