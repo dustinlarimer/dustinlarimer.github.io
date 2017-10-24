@@ -3,180 +3,41 @@
 <head>
   <title>Dustin Larimer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/tachyons.min.css">
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
-<body>
-  <p>Ohhai, friend! I'm Dustin Larimer.</p>
-  <h1>I help people make things.</h1>
-  <p>I also
-    <a href="https://medium.com/@larimer">write</a>,
-    <a href="https://twitter.com/larimer">tweet</a>,
-    <a href="https://github.com/dustinlarimer">code</a>,
-    <a href="https://soundcloud.com/larimer">bop my head</a>, and
-    <a href="https://instagram.com/dustinlarimer">take pics</a>.</p>
+<body class="ma0 pa3 ph5-ns pt5-ns sans-serif tl w-100">
 
-  <form action="" id="messenger" method="GET">
-    <label id="messenger-label" for="messenger-input">What's your name?</label>
-    <textarea id="messenger-input" placeholder="reply"></textarea>
-  </form>
+  <header class="pb3 v-mid">
+    <span class="dib black-80 f5 f4-ns fw6 mt0 mr1 mr3-ns">
+      Dustin Larimer
+    </span>
+    <a title="Medium Blog" href="https://medium.com/@larimer" class="black-60 dib f6 fw6 hover-blue link mr1 mr2-ns">
+      Medium
+    </a>
+    <a title="Twitter" href="https://twitter.com/larimer" class="black-60 dib f6 fw6 hover-blue link mr1 mr2-ns">
+      Twitter
+    </a>
+    <a title="LinkedIn" href="https://www.linkedin.com/in/dustinlarimer/" class="black-60 dib f6 fw6 hover-blue link mr1 mr2-ns">
+      LinkedIn
+    </a>
+    <a title="GitHub" href="https://github.com/dustinlarimer" class="black-60 dib f6 fw6 hover-blue link mr0 mr2-ns">
+      GitHub
+    </a>
+  </header>
 
-  <script src="https://d26b395fwzu5fz.cloudfront.net/3.2.4/keen-tracker.min.js"></script>
-  <script src="js/ready.min.js"></script>
+  <h1 class="f2 f1-ns lh-title">I help others create and exploit clarity.</h1>
+  <p class="lh-copy measure">Product manager, designer and front-end engineer, with an MFA in Design Management from SCAD and over 13 years of experience shaping and building software-based products and services.</p>
+  <p class="lh-copy measure">Previously a founding member of Volta Collaborative, Hackstar for Techstars Cloud, and design lead on the first mobile deposit app ever (+$40B in deposits).</p>
+  <p class="lh-copy measure">Achiever, Futuristic, Learner, Ideation, Context</p>
+
+  <script src="https://d26b395fwzu5fz.cloudfront.net/keen-tracking-1.4.0.min.js"></script>
   <script>
-  var form, label, input, client, convo;
-
-  function init(){
-    form = document.getElementById('messenger');
-    label = document.getElementById('messenger-label');
-    input = document.getElementById('messenger-input');
-
-    convo = {
-      marker: 'name',
-      name: {
-        label: 'What\'s your name?',
-        placeholder: 'reply',
-        reply: ''
-      },
-      message: {
-        label: 'Hello, {Name}! How can I help you?',
-        placeholder: 'reply',
-        reply: ''
-      },
-      contact: {
-        label: 'What\'s the best way to reach you?',
-        placeholder: 'reply',
-        reply: ''
-      },
-      thanks: {
-        label: 'Roger that, {Name}!',
-        placeholder: 'thanks :)',
-        reply: undefined
-      }
-    };
-
-    if (window.addEventListener) {
-      input.addEventListener('keydown', handleKeypress);
-      form.addEventListener('submit', handleSubmit);
-    }
-    else {
-      input.attachEvent('onkeydown', handleKeypress);
-      form.attachEvent('onsubmit', handleSubmit);
-    }
-
-    initAnalytics();
-  }
-
-  function handleCompletion(){
-    client.addEvent('message', {
-      message: {
-        name: convo['name'].reply,
-        text: convo['message'].reply,
-        contact: convo['contact'].reply
-      }
-    });
-  }
-
-  function handleKeypress(e){
-    if (e.keyCode === 13) {
-      handleSubmit(input.value);
-    }
-    else {
-      resetTextareaHeight();
-    }
-  }
-
-  function handleSubmit(e){
-    if (e && e.preventDefault) {
-      e.preventDefault();
-    }
-    convo[convo.marker].reply = input.value;
-    switch (convo.marker) {
-      case 'name':
-        convo.marker = 'message';
-        break;
-      case 'message':
-        convo.marker = 'contact';
-        break;
-      case 'contact':
-        convo.marker = 'thanks';
-        input.disabled = true;
-        handleCompletion();
-        // console.log(convo);
-        break;
-    }
-    input.blur();
-    input.value = '';
-    label.innerHTML = convo[convo.marker]['label'].replace('{Name}', convo['name'].reply);
-    input.placeholder = convo[convo.marker]['placeholder'];
-    setTimeout(function(){
-      input.focus();
-    }, 500);
-
-  }
-
-  function resetTextareaHeight(len){
-    var len = input.value.length;
-    var width = input.clientWidth;
-    input.style.minHeight = len / (width/23) * 70 + "px";
-  }
-
-  function initAnalytics(){
-    client = new Keen({
-      projectId: "51a3a10a38433136b2000002",
-      writeKey: "29e09a8313b49acf86a4fedb331155540526596f5b92cf4b7f90bfbb426e03e967e9fd2f06e45b17d512125f5479cd069b1f687ac7a3ab2aa143cfc95eb167f2b16ce07299fa71b2601c5330606747dcc0dbeeaa541d3451cac68dfd47dba94a2c1614f33c835f5b703613406e6c7b14",
-      requestType: "xhr"
-    });
-
-    client.setGlobalProperties(function(collection){
-      return {
-        page: {
-          title: document.title,
-          host: document.location.host,
-          href: document.location.href,
-          path: document.location.pathname,
-          protocol: document.location.protocol.replace(/:/g, ''),
-          query: document.location.search
-        },
-        referrer: {
-          url: document.referrer
-        },
-        tech: {
-          ip_address: "${keen.ip}",
-          user_agent: "${keen.user_agent}"
-        },
-        keen: {
-          timestamp: new Date().toISOString(),
-          addons: [
-            {
-              "name"   : "keen:ip_to_geo",
-              "input"  : { "ip": "tech.ip_address" },
-              "output" : "geo"
-            },
-            {
-              "name"   : "keen:ua_parser",
-              "input"  : { "ua_string": "tech.user_agent" },
-              "output" : "tech"
-            },
-            {
-              "name"   : "keen:url_parser",
-              "input"  : { "url": "page.href" },
-              "output" : "page.info"
-            },
-            {
-              "name"   : "keen:referrer_parser",
-              "input"  : { "referrer_url": "referrer.url", "page_url": "page.href" },
-              "output" : "referrer.info"
-            }
-          ]
-        }
-      };
-    });
-
-    client.addEvent("pageview");
-  }
-
-  domready(init);
+  var client = new Keen({
+    projectId: "59ee839fc9e77c0001573ea2",
+    writeKey: "48DE4BDE0988E9B806F9550708C2EAAC4742C7FDA6C0980C7A8491738E9D789B499A8006946DF8AE25590CA86EBFBD4A2196A8C915E10FC2A9E844F70922FC4F8C75A86530666E3D32615C619B3E377E4D35B579EFCB2E877BA479A39C559063"
+  });
+  client.initAutoTracking();
   </script>
 </body>
 </html>
