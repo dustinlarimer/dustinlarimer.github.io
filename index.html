@@ -6,10 +6,10 @@
   <link rel="stylesheet" href="./css/tachyons.min.css">
   <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
-<body class="ma0 pa3 ph5-ns pt5-ns sans-serif tl w-100">
+<body class="ma0 pa3 ph5-ns pt4-ns sans-serif tl w-100">
 
-  <header class="pb3 v-mid">
-    <span class="dib black-80 f5 f4-ns fw6 mt0 mr1 mr3-ns">
+  <header class="v-mid">
+    <span class="black-80 dib f5 f4-ns fw6 mt0 mr1 mr3-ns">
       Dustin Larimer
     </span>
     <a title="Medium Blog" href="https://medium.com/@larimer" class="black-60 dib f6 fw6 hover-blue link mr1 mr2-ns">
@@ -26,10 +26,41 @@
     </a>
   </header>
 
-  <h1 class="f2 f1-ns lh-title">I help others create and exploit clarity.</h1>
-  <p class="lh-copy measure">Product manager, designer and front-end engineer, with an MFA in Design Management from SCAD and over 13 years of experience shaping and building software-based products and services.</p>
-  <p class="lh-copy measure">Previously a founding member of Volta Collaborative, Hackstar for Techstars Cloud, and design lead on the first mobile deposit app ever (+$40B in deposits).</p>
-  <p class="lh-copy measure">Achiever, Futuristic, Learner, Ideation, Context</p>
+  <h1 class="black-80 f2 f1-ns lh-title mt6-ns mb2-ns">
+    I help teams create and exploit clarity.
+  </h1>
+
+  <h2 class="black-70 f4 fw3 lh-title mb1-ns">
+    Product manager, designer, and front-end engineer at
+    <a class="black-70 hover-blue fw6 link" href="https://keen.io">Keen IO</a>
+  </h2>
+  <p class="black-60 f6 mb4-ns">
+    <svg class="dib blue h6 mr1 v-mid w1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"/></svg>
+    <a class="blue hover-blue fw6 link" href="https://twitter.com/messages/compose?recipient_id=15675432">Want to chat? DMs are open</a>
+  </p>
+
+
+  <div class="f6">
+    <p class="black-60 lh-copy measure">
+      I have an <a class="black-80 hover-blue fw6 link" href="https://www.scad.edu/academics/programs/design-management">MFA in Design Management</a>
+      from SCAD and 13 years of experience creating products and services.
+    </p>
+    <p class="black-60 lh-copy measure">
+      Previously a founding member of
+      <a class="black-80 hover-blue fw6 link" href="http://www.voltacollaborative.com/">Volta Collaborative</a>,
+      <a class="black-80 hover-blue fw6 link" href="https://www.techstars.com/associates/">Hackstar for Techstars Cloud</a>,
+      and design lead for the first
+      <a class="black-80 hover-blue fw6 link" href="https://www.usaa.com/inet/pages/bk_ck_howto_mobiledeposit_landing_mkt">mobile deposit app</a>
+      ever (+$40B in deposits to date).
+    </p>
+    <p class="lh-copy measure">
+      <a class="black-80 hover-blue fw6 link" href="http://news.gallup.com/businessjournal/622/achiever.aspx">Achiever</a>,
+      <a class="black-80 hover-blue fw6 link" href="http://news.gallup.com/businessjournal/673/futuristic.aspx">Futuristic</a>,
+      <a class="black-80 hover-blue fw6 link" href="http://news.gallup.com/businessjournal/694/learner.aspx">Learner</a>,
+      <a class="black-80 hover-blue fw6 link" href="http://news.gallup.com/businessjournal/679/ideation.aspx">Ideation</a>,
+      <a class="black-80 hover-blue fw6 link" href="http://news.gallup.com/businessjournal/655/context.aspx">Context</a>
+    </p>
+  </div>
 
   <script src="https://d26b395fwzu5fz.cloudfront.net/keen-tracking-1.4.0.min.js"></script>
   <script>
@@ -37,7 +68,9 @@
     projectId: "59ee839fc9e77c0001573ea2",
     writeKey: "48DE4BDE0988E9B806F9550708C2EAAC4742C7FDA6C0980C7A8491738E9D789B499A8006946DF8AE25590CA86EBFBD4A2196A8C915E10FC2A9E844F70922FC4F8C75A86530666E3D32615C619B3E377E4D35B579EFCB2E877BA479A39C559063"
   });
-  client.initAutoTracking();
+  if (document.location.protocol !== 'file:') {
+    client.initAutoTracking();
+  }
   </script>
 </body>
 </html>
