@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dustin Larimer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="../assets/css/tachyons.min.css">
+  <style>
+  ul, ol { line-height: 1.75; }
+  </style>
+</head>
+<body class="ma0 pa3 ph6-ns ph3-m pt4-ns sans-serif tl w-100">
+
+  <header class="v-mid">
+    <span class="black-80 dib f5 f4-ns fw6 mt0 mr1 mr3-ns">
+      Dustin Larimer
+    </span>
+    <a title="Medium Blog" href="https://medium.com/@larimer" class="black-60 dib f7 f6-ns fw6 hover-blue link mr1 mr2-ns">
+      Medium
+    </a>
+    <a title="Twitter" href="https://twitter.com/larimer" class="black-60 dib f7 f6-ns fw6 hover-blue link mr1 mr2-ns">
+      Twitter
+    </a>
+    <a title="LinkedIn" href="https://www.linkedin.com/in/dustinlarimer/" class="black-60 dib f7 f6-ns fw6 hover-blue link mr1 mr2-ns">
+      LinkedIn
+    </a>
+    <a title="GitHub" href="https://github.com/dustinlarimer" class="black-60 dib f7 f6-ns fw6 hover-blue link mr0 mr2-ns">
+      GitHub
+    </a>
+  </header>
+
+
+  <a class="black-60 db f6 fw6 hover-blue link mt5-ns" href="../index.html">&laquo; Home</a>
+  <h1 class="black-80 f2 lh-title mt1-ns mb4-ns">
+    Keen Account Activity Dashboard
+  </h1>
+
+  <div class="cf">
+    <div class="black-70 f6 fl lh-copy pb4 pr5-ns w-100 w-60-ns">
+      <p class="lh-copy mw6 mt0">
+        In the first quarter of 2017 Keen introduced a new pricing model, transitioning from tiered pricing, where customers were only billed for the total number of events recorded, to metered billing based on service usage across every aspect of our platform.
+      </p>
+      <p>
+        The goal of this project was to introduce a new, unified account activity dashboard where account admins can monitor service usage and anticipate their upcoming bills.
+      </p>
+      <p>
+        This project ran in parallel with several other development efforts that would:
+      </p>
+      <ol>
+        <li>Expand service instrumentation across the platform</li>
+        <li>Make the necessary metrics available, and then</li>
+        <li>Integrate that data into an aging billing system</li>
+      </ol>
+
+
+      <h2 class="black-70 f3 fw6 lh-title mb3-ns mt4-ns">
+        Scope
+      </h2>
+
+      <p>
+        The single biggest risk for this project was to fall out of sync with the other development teams. As delivery dates and data availability changed upstream, so did my team's scope.
+      </p>
+
+      <p>
+        Subtle changes in instrumentation or specific data attributes determined whether or not we would be able to plot activity over time, or if the data could be segmented or only shared in aggregate.
+      </p>
+
+      <p>
+        Each project team included one of my fellow Product teammates, so we made explicit, excessive communication our friend. I also spent time with our Customer Success and Support teams, who were already preparing similar activity reports by hand, to get a sense of the data density and granularity that our customers would expect.
+      </p>
+
+      <h2 class="black-70 f3 fw6 lh-title mb3-ns mt4-ns">
+        Data Visualization Design
+      </h2>
+
+      <p>
+        There are plenty of ways to compose and visualize data like this. It's easy to go overboard and miss the point entirely:
+      </p>
+
+      <h4 class="black-80 f5 fw5 lh-title">1. What do you want me to know?</h4>
+      <p>
+        The essential function of this interface is to communicate just enough information that a user can follow the cost curve of their implementation and to see how their decisions translate into real dollars.
+      </p>
+
+      <h4 class="black-80 f5 fw5 lh-title">2. What do you want me to do?</h4>
+      <p>
+        Ideally, nothing. But if a problem arises, this is where it'll likely show up first. A sudden spike could mean the customer's dev team shipped a bug that produces excessive or duplicate data. Similarly, a sudden dip could mean an undetected failure or exception made it into in their integration code.
+      </p>
+
+      <h4 class="black-80 f5 fw5 lh-title">3. What do you want me to <strong>feel</strong>?</h4>
+      <p>
+        I want our customers to feel <strong>confident</strong> that their integration is stable and consistent, and that they won't be taken by surprise when their next invoice hits their credit card.
+      </p>
+
+      <p>
+        After sketching out several approaches I chose to keep things simple and straightforward with repeating area charts, metrics, and billing breakdowns for each platform feature.
+      </p>
+
+      <p>
+        The area charts all display data from the current and previous billing period plotted against a common daily interval x-axis, so users can compare usage and spot deviations over time.  Values along the y-axis are heavily rounded. These values can be quite large, and their precise values mean very little in the larger picture of account administration.
+      </p>
+
+      <h2 class="black-70 f3 fw6 lh-title mb3-ns mt4-ns">
+        Development
+      </h2>
+
+      <p>
+        This app was architected as a pair of ES6 classes: one that acts as a container for the high-level app state and API request handling, and another for the visualizations that are displayed in each section.
+      </p>
+
+      <p>
+        The area chart and metric components are powered by our own open source
+        <a class="black-80 hover-blue fw6 link" href="https://github.com/keen/keen-dataviz.js">Data Visualization SDK</a>,
+        which provides a single interface for a wide range of visualization types. We were really happy with the custom styling and formatting of these area charts, and have since reused those components and formatters in other web console apps.
+      </p>
+
+      <p>
+        The layout was built with <a class="black-80 hover-blue fw6 link" href="http://tachyons.io">Tachyons</a>, as part of an going effort to modernize our internal tooling and speed up interface development.
+      </p>
+
+
+    </div>
+    <div class="fl pr3-ns w-100 w-40-ns">
+      <img class="ba b--light-gray pa1" src="../assets/images/projects/keen-account-activity-full.png" />
+    </div>
+  </div>
+
+  <div class="black-50 pv2 f7">
+    &copy; 2005-2017 Dustin Larimer
+  </div>
+
+  <script src="https://d26b395fwzu5fz.cloudfront.net/keen-tracking-1.4.0.min.js"></script>
+  <script>
+  var client = new Keen({
+    projectId: "59ee839fc9e77c0001573ea2",
+    writeKey: "48DE4BDE0988E9B806F9550708C2EAAC4742C7FDA6C0980C7A8491738E9D789B499A8006946DF8AE25590CA86EBFBD4A2196A8C915E10FC2A9E844F70922FC4F8C75A86530666E3D32615C619B3E377E4D35B579EFCB2E877BA479A39C559063"
+  });
+  if (document.location.protocol !== 'file:') {
+    client.initAutoTracking();
+  }
+  </script>
+</body>
+</html>
