@@ -36,11 +36,15 @@
 
   <div class="cf">
     <div class="black-70 f6 fl lh-copy pb4 pr5-ns w-100 w-60-ns">
+
+      <h2 class="black-70 f3 fw6 lh-title mb3-ns mt4-ns">
+        Background
+      </h2>
       <p class="lh-copy mw6 mt0">
-        In the first quarter of 2017 Keen introduced a new pricing model, transitioning from tiered pricing, where customers were only billed for the total number of events recorded, to metered billing based on service usage across every aspect of our platform.
+        In the first quarter of 2017 Keen introduced a brand new pricing model, transitioning from tiered pricing, where customers were only billed for the total number of events recorded, to metered billing based on service usage across every aspect of our platform.
       </p>
       <p>
-        The goal of this project was to introduce a new, unified account activity dashboard where account admins can monitor service usage and anticipate their upcoming bills.
+        The goal of this project was to create a new, unified account activity dashboard where account admins could monitor their service usage and anticipate their upcoming bills.
       </p>
       <p>
         This project ran in parallel with several other development efforts that would:
@@ -50,7 +54,9 @@
         <li>Make the necessary metrics available, and then</li>
         <li>Integrate that data into an aging billing system</li>
       </ol>
-
+      <p>
+        Each team's work would cascade into the next. My project was lucky #4 in line, consuming data from a pipeline that would soon begin coming online in pieces. And with a fixed launch date, we were racing the clock as well.
+      </p>
 
       <h2 class="black-70 f3 fw6 lh-title mb3-ns mt4-ns">
         Scope
@@ -73,12 +79,12 @@
       </h2>
 
       <p>
-        There are plenty of ways to compose and visualize data like this. It's easy to go overboard and miss the point entirely:
+        There are plenty of ways to compose and visualize system performance data like this. It's easy to go overboard and miss the point entirely:
       </p>
 
       <h4 class="black-80 f5 fw5 lh-title">1. What do you want me to know?</h4>
       <p>
-        The essential function of this interface is to communicate just enough information that a user can follow the cost curve of their implementation and to see how their decisions translate into real dollars.
+        The essential function of this interface is to communicate just enough information so that a user can follow the cost curve of their implementation and to see how their decisions translate into real dollars.
       </p>
 
       <h4 class="black-80 f5 fw5 lh-title">2. What do you want me to do?</h4>
@@ -93,12 +99,14 @@
 
       <p>
         After sketching out several approaches I chose to keep things simple and straightforward with repeating area charts, metrics, and billing breakdowns for each platform feature.
+        I worked through several iterations of high-fidelity mockups, experimenting with whitespace, contrast, and type.
+        Meanwhile, my teammates focused on getting the dev environment, build logic, and high-level templating in place.
       </p>
 
       <img class="ba b--light-gray db mv4 pa1" src="../assets/images/projects/keen-account-activity-zoom.png" />
 
       <p>
-        The area charts all display data from the current and previous billing period plotted against a common daily interval x-axis, so users can compare usage and spot deviations over time.  Values along the y-axis are heavily rounded. These values can be quite large, and their precise values mean very little in the larger picture of account administration.
+        The area charts all display data from the current and previous billing period plotted against a common daily interval x-axis, so users can compare usage and spot deviations over time. Values along the y-axis are heavily rounded. These values can be quite large, and their precise values mean very little in the larger picture of account administration.
       </p>
 
       <h2 class="black-70 f3 fw6 lh-title mb3-ns mt4-ns">
